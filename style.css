@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+button {
+  padding: 1.5rem 4rem;
+  font-size: 1.8rem;
+  background: #4e6c97;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background 0.4s ease-in-out;
+}
+button:hover {
+  background: #2b3c55;
+}
+h1 {
+  font-size: 2.6rem;
+  color: white;
+}
+li,
+p,
+input,
+label {
+  font-size: 1.7rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+h4,
+h5 {
+  font-size: 1.5rem;
+}
+
+/* Nav Section */
+.main-head {
+  background: #131c27;
+  color: white;
+  position: sticky;
+  top: 0rem;
+  z-index: 3;
+}
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  list-style: none;
+  justify-content: space-around;
+}
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: normal;
+}
+#main {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), transparent),
+    url("./img/landing-page.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#main h3 {
+  padding: 4rem;
+}
+
+/* locations section */
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/new-york-page.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations h2 {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+  padding: 1rem 0;
+}
+
+.locations h3 {
+  padding: 2rem 0;
+  background: linear-gradient(#131c27, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+}
+.cloud-animation-1 {
+  right: -10%;
+  animation: CloudAnimation 4s infinite alternate ease-in-out;
+}
+.cloud-animation-2 {
+  animation: CloudAnimation2 4s infinite alternate ease-in-out;
+  top: 20%;
+  z-index: -1;
+}
+
+@keyframes CloudAnimation {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-10%, 0);
+  }
+}
+@keyframes CloudAnimation2 {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+/*Benefits section*/
+.benefits-head {
+  min-height: 30vh;
+  background: #343c44;
+  padding: 3rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.benefits-head h2 {
+  padding: 4rem;
+}
+.benefits-head h3 {
+  padding: 1rem;
+}
+
+.cards {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.1);
+}
+.card-logo {
+  background: #343c44;
+}
+.card img {
+  max-width: 15%;
+  margin: 1rem;
+}
+
+.card h3,
+.card p {
+  padding: 1rem;
+}
+
+#contact {
+  min-height: 90vh;
+  background: url("./img/contact-mountain.png"),
+    linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+
+.form-wrapper {
+  width: 60%;
+  margin: auto;
+  color: white;
+  background: rgba(52, 60, 68, 0.7);
+  border-radius: 2rem;
+}
+
+.contact-header {
+  text-align: center;
+  padding: 4rem;
+}
+
+.form-name,
+.form-email {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+.form-wrapper input {
+  border: none;
+  padding: 1rem 2rem;
+  background-color: rgba(147, 160, 173, 0.6);
+  border-radius: 0.5rem;
+  color: white;
+}
+.form-wrapper button {
+  background: rgb(11, 22, 36);
+  width: 100%;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  margin-top: 4rem;
+}
+
+.form-wrapper button:hover {
+  background: rgb(37, 48, 61);
+}
+footer {
+  background-color: #131c27;
+}
+.footer-wrapper {
+  width: 90%;
+  margin: auto;
+  color: white;
+  display: flex;
+  min-height: 10vh;
+  align-items: center;
+}
+.footer-wrapper h5 {
+  display: flex;
+  flex: 1 1 40rem;
+  padding: 0 2rem;
+}
+.footer-wrapper ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 1rem 0;
+}
+@media screen and (max-width: 888px) {
+  nav h1 {
+    text-align: center;
+  }
+  html {
+    font-size: 45%;
+  }
+  #logo {
+    padding: 2rem;
+  }
+  nav ul {
+    padding-bottom: 1rem;
+  }
+  .cloud-animation-1 {
+    right: -35%;
+  }
+  .cloud-animation-2 {
+    right: -20%;
+    top: -1%;
+  }
+  .cloud {
+    height: 45rem;
+  }
+  .locations-head h3 {
+    background: rgba(23, 34, 48, 0.2);
+    -webkit-text-fill-color: white;
+    padding: 1rem;
+  }
+}
